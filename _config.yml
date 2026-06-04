@@ -1,0 +1,22 @@
+title: "rikka's Blog"
+description: "一个简洁的个人博客。"
+url: "https://yourikka.github.io"
+baseurl: "/blog"
+timezone: "Asia/Shanghai"
+lang: "zh-CN"
+permalink: /posts/:title/
+future: true
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: "文章"
+
+exclude:
+  - README.md
+  - templates/

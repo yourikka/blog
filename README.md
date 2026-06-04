@@ -1,6 +1,6 @@
-# 笔记本
+# rikka's Blog
 
-一个适合 GitHub Pages 的纯静态个人博客模板。页面内容目前保持占位状态，方便后续填写个人信息、文章和作品。
+一个基于 Jekyll 的 GitHub Pages 个人博客。
 
 当前版本是独立的笔记索引风格：纯文本导航、卡片索引、表格式文章归档，不复刻参考站的图标导航或时间线布局。
 
@@ -10,11 +10,14 @@
 - `posts/index.html`: 文章归档
 - `showcase/index.html`: 作品页
 - `about/index.html`: 关于页
-- `templates/post.html`: 文章页面模板
+- `_posts/`: Markdown 文章目录
+- `_layouts/`: Jekyll 页面布局
+- `_includes/`: 公共页头、页脚和主题脚本
 - `assets/styles.css`: 全站样式
 - `assets/main.js`: 深浅主题切换
-- `rss.xml`: RSS 占位文件
+- `feed.xml`: 订阅源文件
 - `404.html`: GitHub Pages 404 页面
+- `Gemfile`: GitHub Pages / Jekyll 依赖
 
 ## 部署到 GitHub Pages
 
@@ -38,10 +41,44 @@ https://你的用户名.github.io/
 
 ## 添加文章
 
-复制 `templates/post.html` 到一个新目录，例如：
+在 `_posts/` 目录新建 Markdown 文件，文件名格式为：
 
 ```text
-posts/my-first-post/index.html
+YYYY-MM-DD-slug.md
 ```
 
-然后修改标题、摘要、日期、标签和正文，并在 `posts/index.html` 与首页里添加对应链接。
+例如：
+
+```text
+_posts/2026-06-04-rag.md
+```
+
+文件开头写 front matter：
+
+```yaml
+---
+title: "文章标题"
+description: "文章摘要"
+date: 2026-06-04 00:00:00 +0800
+slug: example
+tags:
+  - 标签
+---
+```
+
+GitHub Pages 会自动把 Markdown 构建成文章页面，并自动更新文章归档和订阅源。
+
+## 本地预览
+
+需要先安装 Ruby，然后运行：
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+本地地址通常是：
+
+```text
+http://127.0.0.1:4000/blog/
+```

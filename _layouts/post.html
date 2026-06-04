@@ -1,0 +1,19 @@
+---
+layout: default
+nav: posts
+---
+
+<a class="back-link" href="{{ '/posts/' | relative_url }}">返回文章</a>
+<article class="article">
+  <header class="article-head">
+    <p class="kicker">{{ page.tags | join: " · " }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p>{{ page.description }}</p>
+    {% endif %}
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
+  </header>
+  <div class="article-body">
+    {{ content }}
+  </div>
+</article>

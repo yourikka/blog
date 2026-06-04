@@ -1,52 +1,30 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>关于 - 笔记本</title>
-    <meta name="description" content="关于页面。">
-    <meta name="theme-color" content="#f6f1e6">
-    <link rel="stylesheet" href="../assets/styles.css">
-    <script>
-      (() => {
-        try {
-          const stored = localStorage.getItem("theme");
-          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          document.documentElement.dataset.theme = stored || (prefersDark ? "dark" : "light");
-        } catch {
-          document.documentElement.dataset.theme = "light";
-        }
-      })();
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳到正文</a>
-    <div class="page-shell">
-      <header class="masthead">
-        <a class="site-title" href="../">笔记本</a>
-        <nav class="site-nav" aria-label="主导航">
-          <a href="../">首页</a>
-          <a href="../posts/">文章</a>
-          <a href="../showcase/">作品</a>
-          <a class="active" aria-current="page" href="./">关于</a>
-        </nav>
-        <button class="theme-switch" id="theme-toggle" type="button" aria-label="切换主题">主题</button>
-      </header>
+---
+layout: default
+title: 关于
+description: 关于页面。
+nav: about
+---
 
-      <main id="main">
-        <article class="page-head prose">
-          <p class="kicker">个人资料</p>
-          <h1>关于</h1>
-          <p>个人信息暂时没有填写。</p>
-          <p>之后可以在这里放一段简介、联系方式、技术栈，或更完整的自我介绍。</p>
-        </article>
-      </main>
+<article class="page-head prose about-page">
+  <h1>关于</h1>
+  <section class="about-section">
+    <h2>关于我是谁</h2>
+    <p>我是黄忆龙，湖南理工大学人工智能专业在读，2027年毕业。</p>
+  </section>
 
-      <footer class="site-footer">
-        <span>@2026 笔记本</span>
-        <a href="../rss.xml">订阅</a>
-      </footer>
-    </div>
-    <script src="../assets/main.js"></script>
-  </body>
-</html>
+  <section class="about-section">
+    <h2>关于这个 Blog</h2>
+    <p>rikka's Blog 是我的个人 Blog，这里记录我的学习笔记、技术实践和项目复盘，也会放一些生活观察与长期兴趣。</p>
+    <p>我希望它成为一份持续更新的公开笔记：把学到的知识写清楚，把踩过的坑留下来，把项目从想法到落地的过程整理出来。希望我的 Blog 可以为你带来价值！</p>
+  </section>
+
+  <section class="about-section">
+    <h2>主要内容</h2>
+    <p>主要内容会围绕 AI Agent、Go 后端等展开。</p>
+  </section>
+
+  <section class="about-section">
+    <h2>其他兴趣</h2>
+    <p>我也偶尔会写技术内容之外的东西，比如游戏、音乐。</p>
+  </section>
+</article>

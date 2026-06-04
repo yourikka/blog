@@ -1,0 +1,10 @@
+<header class="masthead">
+  <a class="site-title" href="{{ '/' | relative_url }}">rikka's Blog</a>
+  <nav class="site-nav" aria-label="主导航">
+    <a {% if page.nav == "home" %}class="active" aria-current="page"{% endif %} href="{{ '/' | relative_url }}">首页</a>
+    <a {% if page.nav == "posts" %}class="active" aria-current="page"{% endif %} href="{{ '/posts/' | relative_url }}">文章</a>
+    <a {% if page.nav == "showcase" %}class="active" aria-current="page"{% endif %} href="{{ '/showcase/' | relative_url }}">作品</a>
+    <a {% if page.nav == "about" %}class="active" aria-current="page"{% endif %} href="{{ '/about/' | relative_url }}">关于</a>
+  </nav>
+  <button class="theme-switch" id="theme-toggle" type="button" aria-label="切换主题"></button>
+</header>

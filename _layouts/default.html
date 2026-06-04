@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="theme-color" content="#f6f1e6">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} 订阅源" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+    {% include theme-init.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="page-shell">
+      {% include header.html %}
+      <main id="main">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+    <script src="{{ '/assets/main.js' | relative_url }}"></script>
+  </body>
+</html>
