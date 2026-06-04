@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>作品 - 笔记本</title>
+    <meta name="description" content="作品索引。">
+    <meta name="theme-color" content="#f6f1e6">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = stored || (prefersDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="page-shell">
+      <header class="masthead">
+        <a class="site-title" href="../">笔记本</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="../">首页</a>
+          <a href="../posts/">文章</a>
+          <a class="active" aria-current="page" href="./">作品</a>
+          <a href="../about/">关于</a>
+        </nav>
+        <button class="theme-switch" id="theme-toggle" type="button" aria-label="切换主题">主题</button>
+      </header>
+
+      <main id="main">
+        <header class="page-head">
+          <p class="kicker">作品集</p>
+          <h1>作品</h1>
+          <p>项目和链接信息暂时留空。</p>
+        </header>
+
+        <section class="project-list" aria-label="作品列表">
+          <article class="project-item">
+            <div>
+              <span class="card-label">草稿</span>
+              <h2>作品占位</h2>
+            </div>
+            <p>之后可以在这里添加仓库、演示、笔记或项目复盘。</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>@2026 笔记本</span>
+        <a href="../rss.xml">订阅</a>
+      </footer>
+    </div>
+    <script src="../assets/main.js"></script>
+  </body>
+</html>

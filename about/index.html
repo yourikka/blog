@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>关于 - 笔记本</title>
+    <meta name="description" content="关于页面。">
+    <meta name="theme-color" content="#f6f1e6">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = stored || (prefersDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="page-shell">
+      <header class="masthead">
+        <a class="site-title" href="../">笔记本</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="../">首页</a>
+          <a href="../posts/">文章</a>
+          <a href="../showcase/">作品</a>
+          <a class="active" aria-current="page" href="./">关于</a>
+        </nav>
+        <button class="theme-switch" id="theme-toggle" type="button" aria-label="切换主题">主题</button>
+      </header>
+
+      <main id="main">
+        <article class="page-head prose">
+          <p class="kicker">个人资料</p>
+          <h1>关于</h1>
+          <p>个人信息暂时没有填写。</p>
+          <p>之后可以在这里放一段简介、联系方式、技术栈，或更完整的自我介绍。</p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <span>@2026 笔记本</span>
+        <a href="../rss.xml">订阅</a>
+      </footer>
+    </div>
+    <script src="../assets/main.js"></script>
+  </body>
+</html>

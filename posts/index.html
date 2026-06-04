@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章 - 笔记本</title>
+    <meta name="description" content="文章归档。">
+    <meta name="theme-color" content="#f6f1e6">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = stored || (prefersDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="page-shell">
+      <header class="masthead">
+        <a class="site-title" href="../">笔记本</a>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="../">首页</a>
+          <a class="active" aria-current="page" href="./">文章</a>
+          <a href="../showcase/">作品</a>
+          <a href="../about/">关于</a>
+        </nav>
+        <button class="theme-switch" id="theme-toggle" type="button" aria-label="切换主题">主题</button>
+      </header>
+
+      <main id="main">
+        <header class="page-head">
+          <p class="kicker">归档</p>
+          <h1>文章</h1>
+          <p>还没有添加文章内容。</p>
+        </header>
+
+        <section class="section-block" aria-label="Post list">
+          <div class="entry-table">
+            <div class="entry-row empty">
+              <time datetime="0000-00-00">0000-00-00</time>
+              <div>
+                <strong>暂无文章</strong>
+                <p>复制 <code>templates/post.html</code> 后，在这里添加新页面链接。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>@2026 笔记本</span>
+        <a href="../rss.xml">订阅</a>
+      </footer>
+    </div>
+    <script src="../assets/main.js"></script>
+  </body>
+</html>
