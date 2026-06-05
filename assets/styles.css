@@ -118,7 +118,7 @@ code {
   box-shadow: none;
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   margin-bottom: 72px;
   padding: 0 0 18px;
 }
@@ -152,6 +152,29 @@ code {
   background: transparent;
   border-color: var(--accent);
   color: var(--accent-ink);
+}
+
+.icon-link {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.icon-link:hover {
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.icon-link svg {
+  display: block;
+  fill: currentColor;
+  height: 18px;
+  width: 18px;
 }
 
 .theme-switch {
@@ -628,6 +651,25 @@ code {
   padding-left: 18px;
 }
 
+.article-figure {
+  margin: 28px 0 34px;
+}
+
+.article-figure img {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.article-figure figcaption {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
 .rag-flow {
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
@@ -734,7 +776,7 @@ code {
   }
 
   .masthead {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
   }
 
   .site-nav {
